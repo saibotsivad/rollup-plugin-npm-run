@@ -1,5 +1,5 @@
-import { spawn } from 'child_process'
-import kill from 'tree-kill'
+const { spawn } = require('child_process')
+const kill = require('tree-kill')
 
 module.exports = (npmRunScript, options) => {
 	const command = [ 'run', npmRunScript ]
