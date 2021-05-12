@@ -1,0 +1,23 @@
+{
+  "name": "rollup-plugin-npm-run",
+  "version": "0.0.0",
+  "description": "Simple rollup plugin to run an npm run script after the bundle is written.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saibotsivad/rollup-plugin-npm-run.git"
+  },
+  "keywords": [
+    "rollup",
+    "plugin"
+  ],
+  "author": "saibotsivad",
+  "license": "VOL",
+  "bugs": {
+    "url": "https://github.com/saibotsivad/rollup-plugin-npm-run/issues"
+  },
+  "homepage": "https://github.com/saibotsivad/rollup-plugin-npm-run#readme",
+  "dependencies": {
+    "tree-kill": "^1.2.2"
+  }
+}
