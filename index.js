@@ -16,7 +16,7 @@ module.exports = (npmRunScript, options) => {
 	return {
 		writeBundle() {
 			toExit()
-			server = spawn('npm', [ 'run', ...command ], {
+			server = spawn('npm', command, {
 				stdio: [ 'ignore', 'inherit', 'inherit' ],
 				shell: true
 			})

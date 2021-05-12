@@ -18,6 +18,12 @@ Change categories are:
 
 *Add changes here.*
 
+## [1.0.2](https://github.com/saibotsivad/rollup-plugin-npm-run/compare/v1.0.1...v1.0.2) - 2021-05-12
+
+### Fixed
+
+- Correct call to child_process/spawn.
+
 ## [1.0.1](https://github.com/saibotsivad/rollup-plugin-npm-run/compare/v1.0.0...v1.0.1) - 2021-05-12
 
 ### Fixed
