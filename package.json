@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-npm-run",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple rollup plugin to run an npm run script after the bundle is written.",
   "main": "index.js",
   "repository": {
