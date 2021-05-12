@@ -1,7 +1,12 @@
 import { spawn } from 'child_process'
 import kill from 'tree-kill'
 
-export default npmRunScript => {
+module.exports = (npmRunScript, options) => {
+	const command = [ 'run', npmRunScript ]
+	if (options && Array.isArray(options.args)) {
+		command.push(...options.args)
+	}
+
 	let server
 
 	function toExit() {
@@ -11,7 +16,7 @@ export default npmRunScript => {
 	return {
 		writeBundle() {
 			toExit()
-			server = spawn('npm', [ 'run', npmRunScript ], {
+			server = spawn('npm', [ 'run', ...command ], {
 				stdio: [ 'ignore', 'inherit', 'inherit' ],
 				shell: true
 			})

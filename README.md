@@ -2,13 +2,13 @@
 
 Simple [Rollup](https://rollupjs.org/) plugin to run an npm run script after the bundle is written.
 
-## install
+## Install
 
 ```bash
 npm install rollup-plugin-npm-run
 ```
 
-## use
+## Using
 
 Inside your Rollup config:
 
@@ -27,16 +27,18 @@ export default {
 
 This will run `npm run start` after every `writeBundle` event in Rollup.
 
-## api
+Pass in additional args, like `npm run start -- --env dev`: 
 
-This is a really simple plugin, it takes one parameter: the npm run script name.
+```js
+npmRun('start', [ '--', '--env', 'dev' ])
+```
 
-## license
+## API `npmRun(npmRunScript: String, [options: Object])`
 
-The contributor(s) to this creative work voluntarily grant permission
-to any individual(s) or entities of any kind
-- to use the creative work in any manner,
-- to modify the creative work without restriction,
-- to sell the creative work or derivatives thereof for profit, and
-- to release modifications of the creative work in part or whole under any license
-with no requirement for compensation or recognition of any kind.
+* `npmRunScript: String` - The npm script name, e.g. `start` would be the same as running `npm run start`.
+* `options: Object` - Pass optional settings.
+* `options.args: Array<String>` - Pass in an optional list of `args` to the `spawn` process.
+
+## License
+
+Published and released with ❤️ under the [Very Open License](http://veryopenlicense.com)
